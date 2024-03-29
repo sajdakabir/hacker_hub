@@ -29,7 +29,7 @@ let x= x+1;
   let x= x+2;
   println!("The value of x in inner scope is {}",x); //8
 }
-println!("The value of x is {}",x); //6
+println!("The value of x is {}",x); 
 // we can't use mute on shadowing
 
 // unit datatype 
