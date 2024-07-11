@@ -1,6 +1,6 @@
 fn main() {
-   let x = 10;
-   print!("x: {}\n",x );
+   let _x = 10;
+//    print!("x: {}\n",x );
 
 //    string
 
@@ -11,7 +11,7 @@ let _greeting = String::from("hello world");
 let _name = String::from("Sajda");
 // println!("{}", name);
 
-// conditionals
+conditionals
 
 let is_even= false;
 
@@ -34,5 +34,39 @@ let condition = true;
 for i in 0..10 {
     println!("hey {}", i)
 }
+
+// example of loop
+
+loop {
+    println!("hey girl")    //--> need to stop it manuallly
+}
+
+// another exmaple
+
+let mut counter = 0;
+
+    let result = loop {
+        counter += 1;
+        println!("there am i {}", counter);
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("The result is {result}");
+
+
+
+let mut x= 0;
+let ans= loop {
+    x+=1;
+    if x==5 {
+        break x;
+    }
+};
+
+println!("The ans is {ans}");
+
     
 }
