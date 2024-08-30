@@ -40,7 +40,8 @@ println!("x is {x}");
 println!("y is {y}");
 println!("z is {z}");
 println!("0th value is {}", tup.0);
-let unit_tup=();
+// let unit_tup=();
+
 
 // array
 
@@ -48,4 +49,5 @@ let arr = [1,2,3,4,5,5];
 let arr1= [10;5];
 
 println!("the 1st calue of array is {}", arr[0]);
+println!("the 1st calue of array is {}", arr1.len());
 }
