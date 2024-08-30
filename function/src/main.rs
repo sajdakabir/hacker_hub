@@ -15,6 +15,11 @@ fn main() {
 
     let res=is_even(2);
     println!("The value of res is: {res}");
+
+    // if you are using if as a expression so if needed else 
+
+    let x = if res {10} else {20};
+    println!("The value of x is: {x}");
 }
 
 
