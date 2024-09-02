@@ -20,7 +20,13 @@ fn main() {
         },
     };
 
-println!("Enter value is {cel}");
+println!("Entered Celsius value is {cel}");
 
-    
+
+let fah = (cel * 9.0/5.0) + 32.0;
+
+println!("Fahrenheit value is {fah}F");
+
+
+
 }
