@@ -11,24 +11,21 @@ fn main() {
     // println!("S= {s}");
 
     // let s= give_ownership();
-    let s =takes_and_gives_ownership(s);
-
-    println!("S= {s}");
+ takes_and_gives_ownership(&s);
 }
 
-fn take_ownership (s: String){
-    println!("This is from take ownership {s}.")
-}
+// fn take_ownership (s: String){
+//     println!("This is from take ownership {s}.")
+// }
 
-fn give_ownership() -> String{
+// fn give_ownership() -> String{
      
-    let s= String::from(" World");
-    s
+//     let s= String::from(" World");
+//     s
 
-}
+// }
 
-fn takes_and_gives_ownership(s: String)-> String{
+fn takes_and_gives_ownership(s: &String){
     let len= s.len();
     println!("s ={s} and len is {len}");
-    s
 }
