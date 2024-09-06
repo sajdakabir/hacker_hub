@@ -6,12 +6,12 @@ fn main() {
 
     // println!("S= {s1}");
 
-    let s = String::from("Hello");
+    let mut s = String::from("Hello");
     // take_ownership(s);
     // println!("S= {s}");
 
     // let s= give_ownership();
- takes_and_gives_ownership(&s);
+ takes_and_gives_ownership(&mut s);
 }
 
 // fn take_ownership (s: String){
@@ -25,7 +25,8 @@ fn main() {
 
 // }
 
-fn takes_and_gives_ownership(s: &String){
+fn takes_and_gives_ownership(s: &mut String){
     let len= s.len();
+    s.push_str("bye");
     println!("s ={s} and len is {len}");
 }
