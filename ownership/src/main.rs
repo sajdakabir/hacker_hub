@@ -8,4 +8,11 @@ fn main() {
     // println!("r1= {r1} , r2 ={r2},r3={r3}");
     println!("r3={r3}");
 
+    let test = dangle();
+
+}
+
+fn dangle ()-> &String{
+    let s = String::from("hey");
+    &s
 }
