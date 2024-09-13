@@ -39,7 +39,7 @@
 //    }
 // }
 
-
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32
@@ -53,6 +53,9 @@ fn main() {
     };
    let area =calculate_rectangle_area(&rect);
     println!("the value of area {}", area);
+    println!("the {:?}", rect);
+    println!("the pretty {:#?}", rect);
+    dbg!(&rect);  // it give the file and the limne and it can return a value too
 
 }
 
