@@ -43,11 +43,13 @@
 
 fn main() {
     println!("hey there");
-   let area =calculate_rectangle_area(2, 2);
+    let dimention =(2,2);
+   let area =calculate_rectangle_area(dimention);
     println!("the value of area {}", area);
 
 }
 
-fn calculate_rectangle_area(h: u32, w: u32) -> u32{
+fn calculate_rectangle_area(dimesion: ( u32, u32)) -> u32{
+    let ( h, w )= dimesion;
     h*w
 }
