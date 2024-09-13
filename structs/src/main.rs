@@ -40,16 +40,22 @@
 // }
 
 
+struct Rectangle {
+    width: u32,
+    height: u32
+}
 
 fn main() {
     println!("hey there");
-    let dimention =(2,2);
-   let area =calculate_rectangle_area(dimention);
+    let rect= Rectangle{
+        width:20,
+        height:20
+    };
+   let area =calculate_rectangle_area(&rect);
     println!("the value of area {}", area);
 
 }
 
-fn calculate_rectangle_area(dimesion: ( u32, u32)) -> u32{
-    let ( h, w )= dimesion;
-    h*w
+fn calculate_rectangle_area(rct: &Rectangle) -> u32{
+    rct.width*rct.height
 }
