@@ -44,6 +44,12 @@ struct Rectangle {
     width: u32,
     height: u32
 }
+impl Rectangle {
+    // fn calculate_rectangle_area(self: &Self)-> u32{
+    fn calculate_rectangle_area(&self)-> u32{
+        self.width*self.height
+    }
+}
 
 fn main() {
     println!("hey there");
@@ -51,14 +57,10 @@ fn main() {
         width:20,
         height:20
     };
-   let area =calculate_rectangle_area(&rect);
-    println!("the value of area {}", area);
-    println!("the {:?}", rect);
-    println!("the pretty {:#?}", rect);
-    dbg!(&rect);  // it give the file and the limne and it can return a value too
+//    let area =calculate_rectangle_area(&rect);
+    println!("the value of area {}",  rect.calculate_rectangle_area());
+    // println!("the {:?}", rect);
+    // println!("the pretty {:#?}", rect);
+    // dbg!(&rect);  // it give the file and the limne and it can return a value too
 
-}
-
-fn calculate_rectangle_area(rct: &Rectangle) -> u32{
-    rct.width*rct.height
 }
