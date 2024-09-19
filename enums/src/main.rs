@@ -10,12 +10,14 @@ struct IpAddress{
     add: String
 }
 
-fn main() {
-    let google =IpAddress{
-        kind:KindIp::V4,
-        add: String::from("0.0.0.0")
+impl IpAddress {
+    fn new(add: &str)-> Self{
+        Self { kind: KindIp::V4, add: add.to_string() }
+    }
+}
 
-    };
+fn main() {
+    let google =IpAddress::new("0.0.0.0");
     get_ip_add(google);
 }
 
