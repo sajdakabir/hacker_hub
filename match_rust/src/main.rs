@@ -8,14 +8,27 @@ fn main() {
 // println!("the value is {:?} ",sum(4, Some(4)));
 // println!("the value is {:?} ",sum(4, None));
 
-let dice_roll= 4;
+// let dice_roll= 4;
 
-match dice_roll {
-    3 => println!("add_fancy_hat"),
-    7 => println!("remove_fancy_hat"),
-    // _=>()
-    other=>println!("the valur {other}")
+// match dice_roll {
+//     3 => println!("add_fancy_hat"),
+//     7 => println!("remove_fancy_hat"),
+//     // _=>()
+//     other=>println!("the valur {other}")
+// }
+
+let config_match: Option<u8> =Some(3_u8);
+match config_match {
+        Some(i)=> println!("this is it"),
+        _ => (),
 }
+
+if let Some(i)= config_match{
+    println!("hey there")
+}else {
+    println!("bye..");
+}
+
 
 
 }
