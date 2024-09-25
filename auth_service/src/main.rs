@@ -1,3 +1,11 @@
+use auth_service::{authenticate, Credentials};
+
+
 fn main() {
-    println!("Hello, world!")
+    let cre= Credentials{
+        username: "sajda".to_owned(),
+        password:"ehej".to_owned()
+    };
+
+    authenticate(cre);
 }

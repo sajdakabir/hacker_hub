@@ -1,7 +1,7 @@
 #![allow(dead_code,unused_variables)]
-struct Credentials {
-    username: String,
-    password: String
+ pub struct Credentials {
+    pub username: String,
+    pub password: String
 }
 
 enum Status {
@@ -23,7 +23,7 @@ fn login(cred: Credentials){
 }
 
 
-fn authenticate(cred: Credentials) {
+pub fn authenticate(cred: Credentials) {
 
    if let Status::Conncted= connect_to_databse(){}
 
