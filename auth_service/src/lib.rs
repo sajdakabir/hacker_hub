@@ -1,30 +1,44 @@
 #![allow(dead_code,unused_variables)]
- pub struct Credentials {
-    pub username: String,
-    pub password: String
+
+mod database {
+   pub enum Status {
+        Conncted,
+        NotConnected   
+    }
+    
+   pub fn connect_to_databse()-> Status{
+        Status::Conncted
+    }
+    
+   pub fn get_user(){
+    
+    }
+    
 }
 
-enum Status {
-    Conncted,
-    NotConnected   
+pub mod auth_utils {
+    pub fn login(cred:models::Credentials){
+        //fetch the database and get the user
+        // crate::database:: get_user();
+        super::database:: get_user();
+    }
+
+   pub mod models {
+        pub struct Credentials {
+            pub username: String,
+            pub password: String
+        }
+        
+    }
+    
 }
 
-fn connect_to_databse()-> Status{
-    Status::Conncted
-}
-
-fn get_user(){
-
-}
-
-fn login(cred: Credentials){
-    //fetch the database and get the user
-    get_user();
-}
 
 
-pub fn authenticate(cred: Credentials) {
+pub fn authenticate(cred: auth_utils::models::Credentials) {
 
-   if let Status::Conncted= connect_to_databse(){}
+   if let database::Status::Conncted=database::connect_to_databse(){
+    auth_utils::login(cred);
+   }
 
 }

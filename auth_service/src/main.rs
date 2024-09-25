@@ -1,4 +1,5 @@
-use auth_service::{authenticate, Credentials};
+use auth_service::authenticate;
+use auth_service::auth_utils::models::Credentials;
 
 
 fn main() {
