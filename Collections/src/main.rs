@@ -1,4 +1,18 @@
+#[derive(Debug)]
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String)
+}
+
 fn main() {
+
+let cell = vec![SpreadsheetCell::Int(10), SpreadsheetCell::Float(2.4), SpreadsheetCell::Text(String::from("this is a text valu")), SpreadsheetCell::Int(34)];
+
+
+println!("my vector is {:#?}", cell);
+
+
     // let mut vec =Vec::new();
     // vec.push(1);
     // vec.push(2);
@@ -6,7 +20,7 @@ fn main() {
 
     // let vec=vec;
 
-    let mut v1= vec![1,2,3,4];
+    // let mut v1= vec![1,2,3,4];
 
     //get vetcor value
 
@@ -25,11 +39,13 @@ fn main() {
     //     },
     // };
 
-    for i in &mut v1 {
-        println!("the value is {i}");
-        (*i) *= 2;
-    }
-    println!("tha value of vector is {:?} ", v1);
+    // for i in &mut v1 {
+    //     println!("the value is {i}");
+    //     (*i) *= 2;
+    // }
+
+
+    // println!("tha value of vector is {:?} ", v1);
 
 
 
