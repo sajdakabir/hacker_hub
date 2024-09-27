@@ -9,8 +9,13 @@ fn main() {
 
 let cell = vec![SpreadsheetCell::Int(10), SpreadsheetCell::Float(2.4), SpreadsheetCell::Text(String::from("this is a text valu")), SpreadsheetCell::Int(34)];
 
+ match cell.get(3) {
+    Some(SpreadsheetCell::Int(val))=> println!("the value is int {}", val),
+    Some(val)=> println!("the value is {:?}", val),
+    None=>println!("none"),
+};
 
-println!("my vector is {:#?}", cell);
+// println!("my vector is {:#?}", cell);
 
 
     // let mut vec =Vec::new();
