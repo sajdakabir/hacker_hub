@@ -25,7 +25,14 @@ fn main() {
     let mut scores = HashMap::new();
 
     scores.insert("hi".to_string(), 10);
-    scores.insert("hi".to_string(), 45);
+    // scores.insert("hi".to_string(), 5);
+    scores.insert("bye".to_string(), 45);
+
+    println!("the value {:?}", scores);
+
+    // Adding a Key and Value Only If a Key Isn’t Present
+    scores.entry("red".to_string()).or_insert(10);
+    scores.entry("bye".to_string()).or_insert(0);
 
     println!("the value {:?}", scores);
 
