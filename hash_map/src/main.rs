@@ -15,4 +15,8 @@ fn main() {
     let value = scores.get(&String::from("red")).copied().unwrap_or(0);
 
     println!("the value is {value}");
+
+    for (key, val) in &scores{
+        println!("key= {key} and value= {val}");
+    }
 }
