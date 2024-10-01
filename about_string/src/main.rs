@@ -1,3 +1,4 @@
+use unicode_segmentation::UnicodeSegmentation;
 fn main() {
     // create new string 
 
@@ -31,6 +32,22 @@ let s3 = String::from("toe");
 // let s = s1 + "-" + &s2 + "-" + &s3; want to avoid this
 
 let s = format!("{s1}-{s2}-{s3}");
-println!("the value of s is {s}")
+println!("the value of s is {s}");
 
+let hello = String::from("नमस्ते");
+// scaler valu
+for c in hello.chars() {
+    println!("{c}");
+}
+
+for c in hello.bytes() {
+    println!("{c}");
+}
+println!("hush");
+for c in hello.as_bytes() {
+    println!("{c}");
+}
+for c in hello.graphemes(true).collect::<Vec<&str>>() {
+    println!(" e= {c} ");
+}
 }
