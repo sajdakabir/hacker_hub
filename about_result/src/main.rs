@@ -1,5 +1,5 @@
 fn main() {
-    let r =divition(4, 0).unwrap();
+    let r =divition(4, 0).unwrap_or(-1);
 
     println!("r is {r}");
 }
