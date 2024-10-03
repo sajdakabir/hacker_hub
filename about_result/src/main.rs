@@ -1,5 +1,11 @@
 fn main() {
-    let r =divition(4, 0).unwrap_or(-1);
+    let r = match divition(4,0) {
+        Ok(val)=> val,
+        Err(_)=> {
+            println!("the is an error");
+            -1
+        }
+    };
 
     println!("r is {r}");
 }
