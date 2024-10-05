@@ -1,13 +1,16 @@
 fn main() {
 
     let list = vec![1,34,5,2,3,4];
+    let list1 = vec![1.4,3.4,5.4,2.5,4.0];
     let r= get_largest_num(&list);
+    let r1= get_largest_num(&list1);
 
     println!("the value is {r}");
+    println!("the value is {r1}");
     
 }
 
-fn get_largest_num(list: &[i32])-> &i32 {
+fn get_largest_num<T:  std::cmp::PartialOrd>(list: &[T])-> &T {
     let mut ans = &list[0];
     for i in list {
         if ans<i {
