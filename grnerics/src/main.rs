@@ -8,6 +8,12 @@ impl <T, U> Point<T, U>{
         Self { x, y }
     }
 }
+
+impl  Point<f64, f64> {
+    fn distance_from_origin(&self)-> f64 {
+        9.8
+    }
+}
 fn main() {
 
     let list = vec![1,34,5,2,3,4];
@@ -27,7 +33,8 @@ fn main() {
         x: 3.9,
         y: 4.0
     };
-
+    flote.distance_from_origin();
+    
     let point = Point::new(1, 2);
     
 }
