@@ -1,4 +1,5 @@
 
+#[derive(Debug)]
 struct Point <T, U>{
     x: T,
     y: U
@@ -7,13 +8,20 @@ impl <T, U> Point<T, U>{
     fn new(x: T, y: U)-> Self{
         Self { x, y }
     }
-}
 
-impl  Point<f64, f64> {
-    fn distance_from_origin(&self)-> f64 {
-        9.8
+    fn mixup<X, Y> (self, point : Point< X, Y >)-> Point<T, Y>{
+        Point{
+           x: self.x,
+            y: point.y
+        }
     }
 }
+
+// impl  Point<f64, f64> {
+//     fn distance_from_origin(&self)-> f64 {
+//         9.8
+//     }
+// }
 fn main() {
 
     let list = vec![1,34,5,2,3,4];
@@ -33,11 +41,13 @@ fn main() {
         x: 3.9,
         y: 4.0
     };
-    flote.distance_from_origin();
+    // flote.distance_from_origin();
     
     let point = Point::new(1, 2);
-    
+    let p3= integer.mixup(flote);
+    println!("the vaule is {p3:?}");
 }
+
 
 fn get_largest_num<T:  std::cmp::PartialOrd>(list: &[T])-> &T {
     let mut ans = &list[0];
