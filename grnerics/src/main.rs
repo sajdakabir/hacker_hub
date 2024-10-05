@@ -1,7 +1,7 @@
 
-struct Point <T>{
+struct Point <T, U>{
     x: T,
-    y: T
+    y: U
 }
 
 fn main() {
@@ -16,7 +16,7 @@ fn main() {
 
     let integer = Point{
         x: 3,
-        y: 4
+        y: 4.4
     };
     
     let flote = Point{
