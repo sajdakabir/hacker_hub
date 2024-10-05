@@ -3,7 +3,11 @@ struct Point <T, U>{
     x: T,
     y: U
 }
-
+impl <T, U> Point<T, U>{
+    fn new(x: T, y: U)-> Self{
+        Self { x, y }
+    }
+}
 fn main() {
 
     let list = vec![1,34,5,2,3,4];
@@ -23,6 +27,8 @@ fn main() {
         x: 3.9,
         y: 4.0
     };
+
+    let point = Point::new(1, 2);
     
 }
 
