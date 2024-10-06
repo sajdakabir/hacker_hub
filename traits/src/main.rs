@@ -1,9 +1,18 @@
+trait Summary {
+    fn summarize(&self)->String;
+}
 
 struct NewsArticle {
     headline: String,
     location: String,
     author: String,
     content: String
+}
+impl Summary for NewsArticle {
+    fn summarize(&self)->String {
+        let summary = format!("the auhor {} and content {}", self.author, self.content);
+        summary
+    }
 }
 
 struct Tweet {
@@ -23,9 +32,16 @@ fn main() {
         retweet: false
     };
 
-    new_aggregator(tweet);
+    let news = NewsArticle {
+        headline: "what should i give".to_string(),
+        location: "kolkata".to_string(),
+        author: "sajda".to_string(),
+        content: "she is the founder of march".to_string()
+    };
+
+    new_aggregator(news);
 }
 
-fn new_aggregator(tweet: Tweet){
-    println!("the content {}", tweet.content);
+fn new_aggregator(source: impl Summary){
+    println!("the content {}", source.summarize());
 }
