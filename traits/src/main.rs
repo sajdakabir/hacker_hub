@@ -1,6 +1,7 @@
 trait Summary {
+    fn get_username(&self)-> &str;
     fn summarize(&self)->String {
-       "(Read more...)".to_string()
+      format!(" {} (Read more...)", self.get_username())
     }
 }
 
@@ -11,6 +12,9 @@ struct NewsArticle {
     content: String
 }
 impl Summary for NewsArticle {
+    fn get_username(&self)-> &str {
+        self.author.as_str()
+    }
     fn summarize(&self)->String {
         let summary = format!("the auhor {} and content {}", self.author, self.content);
         summary
@@ -25,7 +29,9 @@ struct Tweet {
 }
 
 impl Summary for Tweet {
-
+    fn get_username(&self)-> &str {
+        self.username.as_str()
+    }
 }
 
 fn main() {
