@@ -22,6 +22,13 @@ struct Tweet {
     retweet: bool
 }
 
+impl Summary for Tweet {
+    fn summarize(&self)->String {
+        let summary = format!("the auhor {} and content {}", self.username, self.content);
+        summary
+    }
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -40,6 +47,7 @@ fn main() {
     };
 
     new_aggregator(news);
+    new_aggregator(tweet);
 }
 
 fn new_aggregator(source: impl Summary){
