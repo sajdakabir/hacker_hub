@@ -46,10 +46,10 @@ fn main() {
         content: "she is the founder of march".to_string()
     };
 
-    new_aggregator(news);
-    new_aggregator(tweet);
+    new_aggregator(&news);
+    new_aggregator(&tweet);
 }
 
-fn new_aggregator(source: impl Summary){
+fn new_aggregator(source: &impl Summary){
     println!("the content {}", source.summarize());
 }
