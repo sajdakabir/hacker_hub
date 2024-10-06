@@ -1,5 +1,7 @@
 trait Summary {
-    fn summarize(&self)->String;
+    fn summarize(&self)->String {
+       "(Read more...)".to_string()
+    }
 }
 
 struct NewsArticle {
@@ -23,10 +25,7 @@ struct Tweet {
 }
 
 impl Summary for Tweet {
-    fn summarize(&self)->String {
-        let summary = format!("the auhor {} and content {}", self.username, self.content);
-        summary
-    }
+
 }
 
 fn main() {
